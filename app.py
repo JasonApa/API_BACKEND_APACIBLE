@@ -6,14 +6,14 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return 'Flask backend running'
+    return 'Server is running!'
 
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
     message = data.get('message', '').lower()
     if message == 'hi':
-        reply = 'hello'
+        reply = 'hello Jason Apacible'
     else:
         reply = "I don't understand."
     return jsonify({"reply": reply})
